@@ -156,6 +156,10 @@ fi
 echo "-----> Getting newest list of cabal packages"
 cabal update
 
+echo "-----> Installing fay and fay packages"
+cabal install fay
+cabal install fay-base fay-text fay-dom
+
 echo "-----> Installing user application"
 cabal install -j --disable-library-profiling --disable-executable-profiling --disable-shared
 
